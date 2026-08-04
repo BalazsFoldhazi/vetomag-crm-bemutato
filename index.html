@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vetőmag CRM — agrár-értékesítés egy rendszerben</title>
+<meta name="description" content="Ügyfélkezelés, árajánlat, térkép, hívásnapló és piacfigyelés vetőmag- és agrár-kereskedőknek. Bemutató videók, képernyőképek, prospektus.">
+<meta property="og:title" content="Vetőmag CRM — agrár-értékesítés egy rendszerben">
+<meta property="og:description" content="A partnertörzstől a kiküldött ajánlatig egy rendszerben. Nézd meg 60 másodpercben.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ec; --bark:#2b231a; --forest-900:#0b2b1a; --forest-800:#0b4a27;
+  --forest-700:#178a44; --forest-600:#1f9e52; --wheat:#eda31e;
+  --bg:#071a10; --panel:rgba(251,246,236,.06); --line:rgba(251,246,236,.13);
+  --text:#fbf6ec; --muted:rgba(251,246,236,.66);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);
+     -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ---------------------------------------------------------------- fejléc */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(7,26,16,.82);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.mark{width:36px;height:36px;border-radius:11px;background:var(--forest-700);
+  display:grid;place-items:center;font-size:19px}
+.navlinks{display:flex;gap:26px;font-size:15px;color:var(--muted);font-weight:500}
+.navlinks a:hover{color:var(--text)}
+@media(max-width:760px){.navlinks{display:none}}
+
+/* ------------------------------------------------------------------ hero */
+.hero{position:relative;padding:74px 0 54px;
+  background:radial-gradient(900px 600px at 15% -10%,#14472a 0%,transparent 60%)}
+.pill{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--wheat);border:1px solid rgba(237,163,30,.4);border-radius:100px;padding:9px 18px;margin-bottom:26px}
+h1{font-size:clamp(38px,6.4vw,74px);line-height:1.03;letter-spacing:-.03em;font-weight:700;max-width:16ch}
+h1 em{font-style:normal;color:var(--wheat)}
+.lead{font-size:clamp(17px,2.1vw,22px);line-height:1.5;color:var(--muted);margin-top:26px;max-width:60ch}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;
+  padding:16px 28px;border-radius:100px;border:1px solid transparent;transition:.18s;text-decoration:none}
+.btn-p{background:var(--wheat);color:#0b2b1a}
+.btn-p:hover{background:#f5b23c}
+.btn-s{border-color:var(--line);color:var(--text)}
+.btn-s:hover{background:var(--panel)}
+
+/* ---------------------------------------------------------------- videók */
+.videoblock{margin-top:52px;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:0 40px 90px rgba(0,0,0,.55);background:#000}
+.videoblock video{width:100%;height:auto;display:block}
+.vmeta{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:16px 20px;background:var(--panel);font-size:14px;color:var(--muted);flex-wrap:wrap}
+.vmeta strong{color:var(--text);font-weight:600}
+
+section{padding:72px 0}
+.sechead{max-width:70ch;margin-bottom:38px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--wheat);
+  margin-bottom:14px}
+h2{font-size:clamp(28px,4vw,44px);line-height:1.1;letter-spacing:-.025em;font-weight:700}
+h2 em{font-style:normal;color:var(--forest-600)}
+.sub{font-size:17px;line-height:1.6;color:var(--muted);margin-top:16px}
+
+/* ----------------------------------------------------------------- rács */
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px;
+  transition:.18s}
+.card:hover{border-color:rgba(237,163,30,.35);transform:translateY(-2px)}
+.card h3{font-size:19px;font-weight:700;margin-bottom:10px}
+.card p{font-size:15px;line-height:1.6;color:var(--muted)}
+.card .ico{font-size:26px;margin-bottom:14px;display:block}
+
+/* -------------------------------------------------------------- galéria */
+.shotcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0c2416}
+.shotcard img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top center;
+  transition:.4s ease}
+.shotcard:hover img{transform:scale(1.03)}
+.shotcap{padding:14px 16px;font-size:14px;color:var(--muted)}
+.shotcap b{display:block;color:var(--text);font-size:15px;font-weight:600;margin-bottom:3px}
+
+/* ---------------------------------------------------------------- lista */
+.checks{display:grid;gap:13px;margin-top:8px}
+.checks li{list-style:none;font-size:16px;line-height:1.5;color:var(--muted);
+  padding-left:30px;position:relative}
+.checks li:before{content:'';position:absolute;left:0;top:9px;width:15px;height:4px;
+  border-radius:2px;background:var(--wheat)}
+.checks li b{color:var(--text);font-weight:600}
+
+/* ------------------------------------------------------------------ CTA */
+.final{background:linear-gradient(135deg,var(--forest-800),#0a3a1f);border-radius:22px;
+  padding:56px;text-align:center;border:1px solid rgba(237,163,30,.2)}
+.final h2{margin-bottom:16px}
+.final p{color:rgba(251,246,236,.75);font-size:18px;line-height:1.6;max-width:60ch;margin:0 auto}
+@media(max-width:700px){.final{padding:34px 22px}}
+
+footer{border-top:1px solid var(--line);padding:34px 0;color:rgba(251,246,236,.45);font-size:14px}
+.footrow{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.note{font-size:13px;color:rgba(251,246,236,.4);margin-top:22px;line-height:1.6}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+    <nav class="navlinks">
+      <a href="#video">Videó</a>
+      <a href="#mit-tud">Mit tud</a>
+      <a href="#kepek">Képernyők</a>
+      <a href="#prospektus">Prospektus</a>
+      <a href="#kapcsolat">Kapcsolat</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="pill">Agrár-kereskedésre építve</span>
+    <h1>A partnertörzstől a kiküldött ajánlatig — <em>egy rendszerben</em>.</h1>
+    <p class="lead">Ügyfélkezelés, árajánlat, térkép, hívásnapló és piacfigyelés vetőmag- és
+      agrár-kereskedőknek. Nem általános CRM, amit mezőgazdaságra kell hajlítani —
+      és nem prototípus: élesben megy, minden nap.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="#video">▶ 60 másodperces bemutató</a>
+      <a class="btn btn-s" href="#prospektus">Prospektus (PDF)</a>
+    </div>
+
+    <div class="videoblock" id="video">
+      <video src="video/teaser.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      <div class="vmeta">
+        <span><strong>Gyors bemutató</strong> · 60 másodperc · hang nélkül is érthető</span>
+        <span>A képernyőképeken anonimizált demó-adatok szerepelnek</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sechead">
+      <div class="kicker">Részletes bemutató</div>
+      <h2>Közel három perc, <em>modulról modulra</em></h2>
+      <p class="sub">Ha a rövid videó után maradt kérdés: ebben végigmegyünk a partnerkezelésen,
+        az árajánlaton, a terepi funkciókon, a kapcsolattartáson, a piacfigyelésen és az AI-ügynökökön.</p>
+    </div>
+    <div class="videoblock" style="margin-top:0">
+      <video src="video/teljes.mp4" controls playsinline preload="metadata" poster="video/teljes-poszter.jpg"></video>
+      <div class="vmeta">
+        <span><strong>Teljes bemutató</strong> · 2 perc 45 mp</span>
+        <span>Felirattal — hangszóró nélkül is követhető</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mit-tud">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="kicker">Miért más</div>
+      <h2>Amit egy általános CRM <em>nem tud</em></h2>
+      <p class="sub">A különbség nem a funkciók számában van, hanem abban, hogy az agrár-értékesítés
+        valódi fogalmai mezők a rendszerben — nem a „megjegyzés" rovatba írt szövegek.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="ico">🌾</span>
+        <h3>Agrár-adatok mezőként</h3>
+        <p>Hektár, AKG-részvétel és -terület, kultúrák, állatállomány, öntözés, tervezett és
+          korábbi zöldítés, vásárlási motiváció, versenytárs-ajánlatok.</p>
+      </div>
+      <div class="card">
+        <span class="ico">📄</span>
+        <h3>Vetőmag-ajánlat percek alatt</h3>
+        <p>Keverék-csempék összetétellel és vetési normával, keverék-kalkulátor, súly szerinti
+          szállítási díj, PDF és kiküldés egy gombbal — telefonról is.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🗺️</span>
+        <h3>A terep is benne van</h3>
+        <p>Partnerek térképen, napi túra útvonalba rendezve, MePAR-blokkok, csapadéktérkép,
+          műholdas vegetációs térkép.</p>
+      </div>
+      <div class="card">
+        <span class="ico">📞</span>
+        <h3>Telefon-integráció</h3>
+        <p>Bejövő hívásnál a partner előzménye a képernyőn. A telefonnapló magától frissül,
+          a hívás a partnerhez kerül jegyzettel együtt.</p>
+      </div>
+      <div class="card">
+        <span class="ico">📊</span>
+        <h3>Piacfigyelés</h3>
+        <p>Versenytárs-termékek és árak egy helyen, ár-összehasonlítóval. Elvesztett ajánlatnál
+          rögzül az ok és a versenytárs.</p>
+      </div>
+      <div class="card">
+        <span class="ico">🤖</span>
+        <h3>AI-ügynökök, felügyelettel</h3>
+        <p>Adatdúsítás, partnerprofil, szakmai válaszok a saját dokumentumaidból, e-mail kampányok.
+          Az asszisztens csak a saját CRM-adataidból dolgozik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kepek">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="kicker">Képernyők</div>
+      <h2>Nem makett — <em>a működő rendszer</em></h2>
+      <p class="sub">Minden kép a futó alkalmazásból készült. A partnernevek, telefonszámok és
+        e-mail-címek kitaláltak: a felvételek anonimizált demó-adatbázisból származnak.</p>
+    </div>
+    <div class="grid g3" id="gallery"></div>
+  </div>
+</section>
+
+<section id="prospektus">
+  <div class="wrap">
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <div class="kicker">Prospektus</div>
+        <h2>Nyolc oldal, <em>nyomtatható</em></h2>
+        <p class="sub">Ugyanez leírva: a probléma, a modulok, a bevezetés menete és az árazás
+          alapjai. Jó, ha meg kell mutatni valakinek, aki nem néz videót.</p>
+        <ul class="checks" style="margin-top:26px">
+          <li><b>1–2. oldal</b> · miért nem elég egy általános CRM</li>
+          <li><b>3–4. oldal</b> · partnerkezelés és árajánlat</li>
+          <li><b>5–6. oldal</b> · terep és kapcsolattartás</li>
+          <li><b>7–8. oldal</b> · piac, számok, ügynökök, bevezetés</li>
+        </ul>
+        <div class="cta">
+          <a class="btn btn-p" href="Vetomag-CRM-bemutato.pdf" download>⬇ Prospektus letöltése (PDF)</a>
+        </div>
+      </div>
+      <div class="shotcard">
+        <img src="kepek/06-arajanlat-szerk.png" alt="Árajánlat készítése képernyő">
+        <div class="shotcap"><b>Árajánlat készítése</b>Bal oldalon a szerkesztő, jobb oldalon élő előnézetben az, amit az ügyfél kap</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat">
+  <div class="wrap">
+    <div class="final">
+      <div class="kicker">Kapcsolat</div>
+      <h2>Nézd meg <em>a saját adataitokkal</em></h2>
+      <p>Egy online bemutató fél óra. Megnézzük, mit vezettek ma és miben, és hogy ebből mi
+        kerülne át a rendszerbe. Ha nem illik hozzátok, azt is megmondom.</p>
+      <div class="cta" style="justify-content:center">
+        <a class="btn btn-p" href="https://www.lajtamag.hu" target="_blank" rel="noopener">Kapcsolatfelvétel</a>
+        <a class="btn btn-s" href="video/teljes.mp4">Teljes videó megtekintése</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footrow">
+    <span>Vetőmag CRM · agrár-értékesítési rendszer</span>
+    <span>A képernyőképeken anonimizált demó-adatok szerepelnek.</span>
+  </div>
+  <div class="wrap note">
+    A rendszer élesben működik egy magyar vetőmag-forgalmazónál. A MePAR-, támogatási és
+    fajtaadatok tájékoztató jellegűek, hivatalos nyilvántartást nem helyettesítenek.
+  </div>
+</footer>
+
+<script>
+const SHOTS = [
+  ['01-vezerlopult','Vezérlőpult','Mutatók, havi árbevétel, konverzió — a csempék átrendezhetők'],
+  ['02-partnerlista','Partnerlista','Kereshető, szűrhető megyére, szegmensre, AKG-területre'],
+  ['06-arajanlat-szerk','Árajánlat készítése','Szerkesztő és élő előnézet egymás mellett'],
+  ['05-arajanlat-uj','Keverék-csempék','Összetétel, kiszerelés, vetési norma, utóvetemény'],
+  ['10-kalkulator','Keverék-kalkulátor','Hány zsák kell 40 hektárra? Terület alapján számol'],
+  ['07-arajanlatok','Árajánlatok','Kiküldve, elfogadva, elvesztve — és hogy miért'],
+  ['16-napi-tura','Napi túra','Kijelölöd a partnereket, a rendszer útvonalba rendezi'],
+  ['04-terkep','Partnertérkép','Minden partner a térképen, szűrhetően'],
+  ['26-csapadek','Csapadéktérkép','Hol esett az éjjel és mennyi'],
+  ['27-mepar','MePAR térkép','Blokkazonosítók és területek'],
+  ['12-hivasnaplo','Hívásnapló','A telefonnapló magától frissül, a hívás a partnerhez kerül'],
+  ['15-naptar','Naptár','Látogatások, túrák, határidők egy helyen'],
+  ['22-piacfigyelo','Piacfigyelő','Versenytárs-termékek és árak, ár-összehasonlítóval'],
+  ['20-korabbi-eladasok','Korábbi eladások','A tavalyi rendelés egy keresés'],
+  ['36-asszisztens','Belső asszisztens','Kérdezz rá a saját CRM-adataidra'],
+  ['30-kalaszos','Kalászos fajtatábla','Fajtaadatok forrásmegjelöléssel'],
+];
+const g = document.getElementById('gallery');
+g.innerHTML = SHOTS.map(([f,t,d]) => `
+  <figure class="shotcard">
+    <img src="kepek/${f}.png" alt="${t}" loading="lazy">
+    <figcaption class="shotcap"><b>${t}</b>${d}</figcaption>
+  </figure>`).join('');
+/* a hiányzó képeket csendben elrejtjük, hogy ne maradjon törött ikon */
+g.querySelectorAll('img').forEach(img => {
+  img.addEventListener('error', () => img.closest('figure').remove());
+});
+</script>
+</body>
+</html>

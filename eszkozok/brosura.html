@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Vetőmag CRM — bemutató</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family:'Outfit', system-ui, sans-serif; color:#2b231a; background:#fff; }
+
+.page { position:relative; width:210mm; height:297mm; overflow:hidden;
+        page-break-after:always; background:#fbf6ec; }
+.page:last-child { page-break-after:auto; }
+.dark { background:#0b2b1a; color:#fbf6ec; }
+.pad { padding:18mm 16mm; height:100%; display:flex; flex-direction:column; }
+
+/* --- fejléc / lábléc --- */
+.head { display:flex; align-items:center; justify-content:space-between; margin-bottom:9mm; }
+.brand { display:flex; align-items:center; gap:3mm; font-weight:700; font-size:11pt; letter-spacing:-.01em; }
+.mark { width:8mm; height:8mm; border-radius:2.4mm; background:#178a44; color:#fff;
+        display:flex; align-items:center; justify-content:center; font-size:10pt; }
+.chapter { font-size:8.5pt; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#178a44; }
+.dark .chapter { color:#eda31e; }
+.foot { position:absolute; left:16mm; right:16mm; bottom:9mm; display:flex;
+        justify-content:space-between; font-size:8pt; color:#8b8071; }
+.dark .foot { color:rgba(251,246,236,.45); }
+
+/* --- tipográfia --- */
+h1 { font-size:34pt; line-height:1.04; letter-spacing:-.025em; font-weight:700; }
+h2 { font-size:21pt; line-height:1.1; letter-spacing:-.02em; font-weight:700; margin-bottom:4mm; }
+h3 { font-size:12pt; font-weight:700; margin-bottom:1.5mm; letter-spacing:-.01em; }
+p  { font-size:10pt; line-height:1.55; color:#5c5346; }
+.dark p { color:rgba(251,246,236,.75); }
+.lead { font-size:12.5pt; line-height:1.5; color:#4a4238; }
+.dark .lead { color:rgba(251,246,236,.82); }
+em { font-style:normal; color:#178a44; font-weight:700; }
+.dark em { color:#eda31e; }
+
+/* --- címlap --- */
+.cover-title { font-size:44pt; line-height:1.02; letter-spacing:-.03em; font-weight:700; }
+.cover-sub { font-size:14pt; line-height:1.45; margin-top:7mm; max-width:135mm;
+             color:rgba(251,246,236,.78); }
+.cover-shot { position:absolute; left:16mm; right:16mm; bottom:34mm; border-radius:4mm;
+              overflow:hidden; box-shadow:0 12mm 24mm rgba(0,0,0,.45); border:1px solid rgba(251,246,236,.14); }
+.cover-shot img { display:block; width:100%; }
+.pill { display:inline-block; font-size:8.5pt; font-weight:700; letter-spacing:.14em;
+        text-transform:uppercase; background:#eda31e; color:#0b2b1a; padding:2mm 4mm;
+        border-radius:2mm; margin-bottom:6mm; }
+
+/* --- rács --- */
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:7mm; }
+.grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:5mm; }
+.card { background:#fff; border:1px solid #eae2d2; border-radius:3mm; padding:6mm; }
+.dark .card { background:rgba(251,246,236,.06); border-color:rgba(251,246,236,.12); }
+.card p { font-size:9.5pt; }
+
+/* --- képek --- */
+.shot { border-radius:2.5mm; overflow:hidden; border:1px solid #e2d9c6;
+        box-shadow:0 4mm 10mm rgba(43,35,26,.13); background:#fff; }
+.shot img { display:block; width:100%; }
+.shot.crop { height:52mm; }
+.shot.crop img { height:auto; margin-top:0; }
+.cap { font-size:8pt; color:#8b8071; margin-top:2mm; }
+.dark .cap { color:rgba(251,246,236,.5); }
+
+/* --- listák --- */
+ul { list-style:none; }
+li { font-size:10pt; line-height:1.5; color:#5c5346; padding-left:6mm; position:relative; margin-bottom:2.5mm; }
+.dark li { color:rgba(251,246,236,.78); }
+li:before { content:''; position:absolute; left:0; top:2.6mm; width:3mm; height:1mm;
+            border-radius:.5mm; background:#178a44; }
+.dark li:before { background:#eda31e; }
+
+/* --- lépések --- */
+.steps { display:flex; gap:4mm; margin-top:5mm; }
+.step { flex:1; }
+.stepnum { width:9mm; height:9mm; border-radius:50%; background:#178a44; color:#fff;
+           display:flex; align-items:center; justify-content:center; font-weight:700;
+           font-size:10pt; margin-bottom:3mm; }
+.step h3 { font-size:10.5pt; }
+.step p { font-size:8.5pt; }
+
+/* --- kiemelt sáv --- */
+.band { background:#0b4a27; color:#fbf6ec; border-radius:3mm; padding:7mm; margin-top:auto; }
+.band h3 { color:#eda31e; font-size:11pt; }
+.band p { color:rgba(251,246,236,.8); font-size:9.5pt; }
+
+.stats { display:flex; gap:8mm; margin:6mm 0; }
+.stat .n { font-size:26pt; font-weight:700; color:#178a44; line-height:1; letter-spacing:-.03em; }
+.dark .stat .n { color:#eda31e; }
+.stat .l { font-size:8.5pt; color:#8b8071; margin-top:1.5mm; }
+.dark .stat .l { color:rgba(251,246,236,.55); }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ 1. CÍMLAP -->
+<div class="page dark">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">Termékbemutató · 2026</div>
+    </div>
+    <div style="margin-top:14mm">
+      <span class="pill">Agrár-kereskedésre építve</span>
+      <h1 class="cover-title">A partnertörzstől<br>a kiküldött<br>ajánlatig — <em>egy<br>rendszerben</em>.</h1>
+      <p class="cover-sub">Ügyfélkezelés, árajánlat, térkép, hívásnapló és piacfigyelés
+        vetőmag- és agrár-kereskedőknek. Nem általános CRM, amit mezőgazdaságra kell hajlítani.</p>
+    </div>
+  </div>
+  <div class="cover-shot"><img src="../shots/01-vezerlopult.png" alt=""></div>
+  <div class="foot"><span>Élesben működő rendszer egy magyar vetőmag-forgalmazónál</span><span>1</span></div>
+</div>
+
+<!-- ========================================================= 2. A PROBLÉMA -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">Miért</div>
+    </div>
+    <h2>Az agrár-értékesítés tudása<br>ma is <em>fejekben és füzetekben</em> van.</h2>
+    <p class="lead" style="max-width:150mm">Ki mit vetett tavaly. Mekkora az AKG-s területe. Miért nem
+      vett tőlünk idén. Melyik versenytárs vitte el. Amíg ez nem kerül rendszerbe, egyetlen
+      felmondással kisétál az ajtón.</p>
+
+    <div class="grid3" style="margin-top:9mm">
+      <div class="card">
+        <h3>Szétszórt adat</h3>
+        <p>Partnerlista az egyik Excelben, árlista a másikban, korábbi eladások a harmadikban.
+           Senki nem tudja, melyik a friss.</p>
+      </div>
+      <div class="card">
+        <h3>Lassú ajánlat</h3>
+        <p>Keverék kiszámolása, árazás, Word, PDF, levelezés. Mire kimegy, az ügyfél már
+           kapott kettőt máshonnan.</p>
+      </div>
+      <div class="card">
+        <h3>Vak terep</h3>
+        <p>Kihez menjek ma? Merre van útba? Mikor beszéltünk utoljára, és mi hangzott el?</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:8mm">Amit egy általános CRM <em>nem</em> tud</h2>
+    <div class="grid2">
+      <div>
+        <ul>
+          <li>Hektár, AKG-részvétel és -terület mint valódi mező</li>
+          <li>Kultúrák, állatállomány, öntözés, zöldítés</li>
+          <li>Vetőmagnorma kg/ha, kiszerelés, zsákszám</li>
+          <li>Súly szerint számolt szállítási díj</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>Partnerek térképen, napi túra útvonalba rendezve</li>
+          <li>MePAR-blokkok, csapadék- és műholdas térkép</li>
+          <li>Bejövő híváskor a partner előzménye a képernyőn</li>
+          <li>Versenytárs-árak és ár-összehasonlítás</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin-top:7mm">Nem szoftvercégként indult</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>A napi munkából nőtt ki</h3>
+        <p>Minden funkció azért került bele, mert konkrétan hiányzott egy terepnapon vagy egy
+           ajánlatadásnál. Nincs benne olyan modul, amit senki nem használ.</p>
+      </div>
+      <div class="card">
+        <h3>Használat közben csiszolódik</h3>
+        <p>Ami nem működik a gyakorlatban, azt kidobjuk. Ami hiányzik, azt beépítjük.
+           A rendszer a szezonnal együtt változik.</p>
+      </div>
+      <div class="card">
+        <h3>Magyar nyelven, magyar viszonyokra</h3>
+        <p>AKG, MePAR, NÉBIH-fajtajegyzék, megyei bontás, magyar árlista-struktúra —
+           nem fordított külföldi szoftver.</p>
+      </div>
+    </div>
+
+    <div class="band" style="padding:5.5mm; margin-bottom:4mm">
+      <h3>Kinek szól</h3>
+      <p>Vetőmag-, növényvédőszer- és műtrágya-forgalmazó kis- és középvállalkozásoknak, ahol
+        1–20 üzletkötő jár terepre. Ha egy általános CRM-ben minden megvan, amire szükséged van,
+        maradj annál — ez azoknak készült, akiknek pont az agrár-rész hiányzik.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>2</span></div>
+</div>
+
+<!-- ========================================================== 3. PARTNEREK -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">01 · Partnerek</div>
+    </div>
+    <h2>Minden, amit egy gazdálkodóról<br>tudni kell — <em>egy adatlapon</em>.</h2>
+    <p class="lead" style="max-width:150mm">Nem csak név és telefonszám. A partnerhez tartozik a
+      terület, az AKG-s kötelezettség, a kultúrák, az öntözés, a korábbi és tervezett zöldítés,
+      a vásárlási motiváció és az is, milyen versenytárs-ajánlatot kapott.</p>
+
+    <div class="shot" style="margin-top:7mm"><img src="../shots/02-partnerlista.png" alt=""></div>
+    <div class="cap">Partnerlista — kereshető, szűrhető megyére, szegmensre, státuszra, AKG-területre</div>
+
+    <div class="grid2" style="margin-top:7mm">
+      <div>
+        <h3>Adatbevitel emberi tempóban</h3>
+        <ul>
+          <li>Névjegykártya vagy papírlista lefotózása → partner lesz belőle</li>
+          <li>Excel-import több ezer sorhoz, rugalmas oszlopfelismeréssel</li>
+          <li>Duplikátum-szűrés és összevonás</li>
+          <li>Google-névjegyek kétirányú szinkronja</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Piaci szereplők külön</h3>
+        <ul>
+          <li>Akik még nem vevők, de relevánsak</li>
+          <li>Egy kattintás a „partnerré minősítés"</li>
+          <li>Külföldi partnerkutatás támogatása</li>
+          <li>Térképes megjelenítés itt is</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>3</span></div>
+</div>
+
+<!-- ========================================================== 4. ÁRAJÁNLAT -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">02 · Árajánlat</div>
+    </div>
+    <h2>Az igénytől a kiküldött PDF-ig<br><em>egyetlen folyamat</em>.</h2>
+
+    <div class="shot" style="margin-top:6mm"><img src="../shots/06-arajanlat-szerk.png" alt=""></div>
+    <div class="cap">Árajánlat készítése — bal oldalon a szerkesztő, jobb oldalon élő előnézetben az, amit az ügyfél kap</div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="stepnum">1</div>
+        <h3>Címzett</h3>
+        <p>Partner vagy piaci szereplő a törzsből, adatokkal együtt.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">2</div>
+        <h3>Tételek</h3>
+        <p>Koppintás a keverékre. Kedvezmény, szállítás, ÁFA magától.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">3</div>
+        <h3>PDF</h3>
+        <p>Élő előnézet, majd cégarculatos PDF egy kattintással.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">4</div>
+        <h3>Kiküldés</h3>
+        <p>E-mail az ügyfélnek — telefonról is, egy koppintással.</p>
+      </div>
+      <div class="step">
+        <div class="stepnum">5</div>
+        <h3>Utánkövetés</h3>
+        <p>Automatikus emlékeztető a teendők között.</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:8mm">
+      <div>
+        <h3>Amit máshol kézzel kell számolni</h3>
+        <ul>
+          <li><em>Keverék-kalkulátor:</em> terület és keverék alapján mennyiség, zsákszám, ár</li>
+          <li><em>Szétbontás:</em> a több terméket tartalmazó ajánlat külön ajánlatokra bomlik,
+              és mind kimegy egy gombnyomással</li>
+          <li><em>Szállítási díj:</em> súlyarányosan oszlik szét a részajánlatok között</li>
+          <li><em>Űrlap-beolvasás:</em> a papíron kitöltött igénylapot lefotózod</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ami az üzletből lesz</h3>
+        <ul>
+          <li>Elfogadott ajánlatból egy kattintás az eladás</li>
+          <li>Fizetési státusz és mód követése</li>
+          <li>Elvesztett ajánlatnál az ok és a versenytárs rögzítése</li>
+          <li>Árlisták kereskedői, végfelhasználói és viszonteladói árral</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>4</span></div>
+</div>
+
+<!-- ============================================================== 5. TEREP -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">03 · Terep</div>
+    </div>
+    <h2>Ami az irodán kívül történik —<br><em>térképen, nem fejben</em>.</h2>
+
+    <div class="shot" style="margin-top:6mm"><img src="../shots/16-napi-tura.png" alt=""></div>
+    <div class="cap">Napi túra — kijelölöd a partnereket, a rendszer útvonalba rendezi őket; táv és idő azonnal látszik</div>
+
+    <div class="grid2" style="margin-top:7mm">
+      <div class="shot"><img src="../shots/26-csapadek.png" alt=""></div>
+      <div class="shot"><img src="../shots/27-mepar.png" alt=""></div>
+    </div>
+    <div class="grid2">
+      <div class="cap">Csapadéktérkép — hol esett az éjjel és mennyi</div>
+      <div class="cap">MePAR — blokkazonosítók és területek</div>
+    </div>
+
+    <div class="grid2" style="margin-top:7mm">
+      <div>
+        <h3>Térkép és túra</h3>
+        <ul>
+          <li>Minden partner és piaci szereplő a térképen, szűrhetően</li>
+          <li>Napi kör tervezése listából vagy térképi kijelöléssel</li>
+          <li>Navigáció indítása, túra letöltése</li>
+          <li>Látogatások rögzítése helyszínnel és következő lépéssel</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Szaktanácsadás</h3>
+        <ul>
+          <li>Műholdas vegetációs (NDVI) térkép a partner tábláira</li>
+          <li>Termesztéstechnológiai leírások kultúránként</li>
+          <li>Zöldtrágya-keveréktábla összetétellel és normákkal</li>
+          <li>Kalászos fajtatábla, forrásmegjelöléssel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>5</span></div>
+</div>
+
+<!-- =================================================== 6. KAPCSOLATTARTÁS -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">04 · Kapcsolattartás</div>
+    </div>
+    <h2>Csörög a telefon —<br>és <em>már látod, ki az</em>.</h2>
+    <p class="lead" style="max-width:150mm">Bejövő hívásnál a mobil képernyőjén megjelenik a partner
+      neve, cége, a legutóbbi beszélgetés és a tavalyi vásárlás. Még felvétel előtt.</p>
+
+    <div style="display:flex; gap:7mm; margin-top:7mm; align-items:flex-start">
+      <div class="shot" style="width:52mm; flex:none"><img src="../shots/m1-bejovo-hivas.png" alt=""></div>
+      <div style="flex:1">
+        <div class="shot"><img src="../shots/12-hivasnaplo.png" alt=""></div>
+        <div class="cap">Hívásnapló — a telefonnapló magától frissül, a szám alapján a hívás a partnerhez kerül</div>
+        <h3 style="margin-top:5mm">Napi ritmus</h3>
+        <ul>
+          <li>Napi híváslista szűrők alapján, nyomtatható formában is</li>
+          <li>Hívásjegyzet: ami elhangzott, a partnerhez kerül</li>
+          <li>Teendők Kanban-táblán — beépítve, külön Trello nélkül</li>
+          <li>Naptár látogatásokkal és határidőkkel, ICS-exporttal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid3" style="margin-top:9mm">
+      <div class="card">
+        <h3>Hívás közben</h3>
+        <p>Nem kell keresgélni: a partner neve, települése, a legutóbbi hívás és annak jegyzete
+           ott van a képernyőn, amíg cseng a telefon.</p>
+      </div>
+      <div class="card">
+        <h3>Hívás után</h3>
+        <p>Egy mezőbe beírod (vagy bediktálod), mi hangzott el. A jegyzet a partnerhez kerül,
+           és ott lesz a következő megkeresésnél.</p>
+      </div>
+      <div class="card">
+        <h3>Másnap</h3>
+        <p>A napi hívólista szűrők alapján áll össze: kit ígértél visszahívni, kinél jár le az
+           ajánlat, ki nem rendelt idén.</p>
+      </div>
+    </div>
+
+    <div class="band">
+      <h3>Miért számít ez pénzben</h3>
+      <p>Egy elfelejtett visszahívás egy elveszett rendelés. A rendszer nem attól lesz hasznos,
+        hogy szép, hanem attól, hogy a következő lépés mindig ott van valakinek a listáján.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>6</span></div>
+</div>
+
+<!-- ============================================= 7. PIAC, SZÁMOK, ÜGYNÖKÖK -->
+<div class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">05 · Piac, számok, ügynökök</div>
+    </div>
+    <h2>Mi történik körülötted —<br>és <em>mi lett a munkádból</em>.</h2>
+
+    <div class="shot" style="margin-top:6mm"><img src="../shots/22-piacfigyelo.png" alt=""></div>
+    <div class="cap">Piacfigyelő — versenytárs-termékek és árak, ár-összehasonlító nézettel</div>
+
+    <div class="grid2" style="margin-top:7mm">
+      <div>
+        <h3>Kimutatások</h3>
+        <ul>
+          <li>Árbevétel termék, megye, partner és időszak szerint</li>
+          <li>Napi és heti jelentés, exportálva a vezetőnek</li>
+          <li>Korábbi évek eladásai importálva, azonnal kereshetők</li>
+          <li>Tervek és teljesülésük követése</li>
+        </ul>
+      </div>
+      <div>
+        <h3>AI-ügynökök — segéderő, nem varázslat</h3>
+        <ul>
+          <li><em>Asszisztens:</em> kérdezz rá a saját CRM-adataidra</li>
+          <li><em>Adatdúsító:</em> hiányos partneradatok kiegészítése</li>
+          <li><em>Szaktanácsadó:</em> válaszok a saját dokumentumaidból</li>
+          <li><em>E-mail ügynök:</em> kampánylevelek több fiókból</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:7mm">
+      <h3>Adatvédelem, őszintén</h3>
+      <p>Az asszisztens kizárólag a CRM belső adataiból dolgozik, és igény szerint teljesen helyben
+        futó nyelvi modellel is működik — ekkor semmilyen adat nem hagyja el a céget. Az ügynökök
+        javaslatot írnak; a döntés az üzletkötőé. A MePAR- és támogatási adatok tájékoztató jellegűek.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Vetőmag CRM · termékbemutató</span><span>7</span></div>
+</div>
+
+<!-- ====================================================== 8. MOBIL + CTA -->
+<div class="page dark">
+  <div class="pad">
+    <div class="head">
+      <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
+      <div class="chapter">Bevezetés</div>
+    </div>
+    <h2>Zsebben is a teljes rendszer.</h2>
+    <p class="lead" style="max-width:150mm">Telepíthető alkalmazásként a kezdőképernyőre,
+      app-store nélkül. A képernyők mobilra készültek — nem kicsinyített asztali nézetek.</p>
+
+    <div style="display:flex; gap:6mm; margin-top:7mm">
+      <div class="shot" style="width:44mm; flex:none; border:none"><img src="../shots/m3-vezerlopult-mobil.png" alt=""></div>
+      <div class="shot" style="width:44mm; flex:none; border:none"><img src="../shots/m4-arajanlat-mobil.png" alt=""></div>
+      <div style="flex:1">
+        <h3>Bevezetés lépései</h3>
+        <ul>
+          <li><em>1.</em> Igényfelmérés — mit vezettek ma és miben</li>
+          <li><em>2.</em> Adatimport: partnerek, árlista, korábbi eladások Excelből</li>
+          <li><em>3.</em> Testreszabás: mezők, árazás, arculat az ajánlaton</li>
+          <li><em>4.</em> Betanítás az üzletkötőknek, terepi próba</li>
+          <li><em>5.</em> Éles indulás, majd finomhangolás használat közben</li>
+        </ul>
+        <p style="margin-top:4mm; font-size:9pt">Nem ígérünk egynapos bevezetést: az adatimport
+          és a betanítás idő. Cserébe nem egy üres rendszert kaptok.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">9</div><div class="l">modul</div></div>
+      <div class="stat"><div class="n">40+</div><div class="l">képernyő</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">magyar nyelvű</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">app-store függőség</div></div>
+    </div>
+
+    <div class="grid3" style="margin-top:2mm">
+      <div class="card">
+        <h3>Adatátvétel</h3>
+        <p>Partnerlista, árlista és a korábbi évek eladásai Excelből, duplikátum-szűréssel.
+           Nem üres rendszerrel indultok.</p>
+      </div>
+      <div class="card">
+        <h3>Testreszabás</h3>
+        <p>Az ajánlat arculata, a termékkör, az árstruktúra és a mezők a ti működésetekhez
+           igazodnak.</p>
+      </div>
+      <div class="card">
+        <h3>Utána is</h3>
+        <p>A rendszer a szezonnal együtt változik. Ami a gyakorlatban nem működik, azt
+           átalakítjuk.</p>
+      </div>
+    </div>
+
+    <div class="band" style="background:#eda31e; color:#0b2b1a">
+      <h3 style="color:#0b4a27">Nézd meg működés közben</h3>
+      <p style="color:rgba(11,43,26,.82)">A bemutató videók, a képernyőgaléria és ez a prospektus
+        egy helyen elérhető. Ha érdekel, hogyan nézne ki a ti adataitokkal, keress meg —
+        egy online bemutató fél óra.</p>
+      <p style="color:#0b4a27; font-weight:700; font-size:11pt; margin-top:4mm">
+        balazsfoldhazi.github.io/vetomag-crm-bemutato</p>
+    </div>
+  </div>
+  <div class="foot"><span>A képernyőképeken anonimizált demó-adatok szerepelnek.</span><span>8</span></div>
+</div>
+
+</body>
+</html>
