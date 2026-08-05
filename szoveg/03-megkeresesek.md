@@ -57,6 +57,34 @@ Földházi Balázs
 
 ---
 
+## 2/b. Hideg e-mail — a támogatási listára építve (ez a legerősebb)
+
+**Tárgy:** Mennyi hektárja van a partnereiknek? (Nyilvános adatból kijön)
+
+Kedves [Név]!
+
+Az agrártámogatási kifizetések nyilvánosak — csak nyers formában használhatatlanok.
+
+Építettem egy CRM-et, ami behúzza ezt a listát, és a támogatási összegből **visszaszámolja a
+gazdaság méretét**: megadod, hogy hektáronként mennyi jár, és a listában megjelenik, kinek
+mekkora a területe. Ugyanez működik az állatlétszámra az anyatehén-jogcímből.
+
+Innen két dolog következik:
+
+1. Kiszűrhető, **kinek van AKG-s kötelezettsége** egy adott megyében — akinek a zöldtrágya
+   nem választás, hanem előírás.
+2. A kiszámolt méret **bekerül a partner adatlapjába**, és a kijelöltekből egy kattintással
+   havi látogatási terv lesz.
+
+50 másodpercben itt látszik, hogyan: [link]
+
+Ha érdekli, egy fél órás online bemutatón megnézzük a maguk megyéjével.
+
+Üdvözlettel,
+Földházi Balázs
+
+---
+
 ## 3. LinkedIn / Facebook poszt — rövid
 
 Négy éve azzal töltöm a napjaimat, hogy vetőmagot adok el gazdáknak. És azzal, hogy este

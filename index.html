@@ -116,6 +116,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:rgba(251,246,236,.4
     <div class="brand"><span class="mark">🌱</span> Vetőmag CRM</div>
     <nav class="navlinks">
       <a href="#video">Videó</a>
+      <a href="#tamogatas">Támogatások</a>
       <a href="#mit-tud">Mit tud</a>
       <a href="#kepek">Képernyők</a>
       <a href="#prospektus">Prospektus</a>
@@ -150,15 +151,57 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:rgba(251,246,236,.4
   <div class="wrap">
     <div class="sechead">
       <div class="kicker">Részletes bemutató</div>
-      <h2>Közel három perc, <em>modulról modulra</em></h2>
+      <h2>Három perc, <em>modulról modulra</em></h2>
       <p class="sub">Ha a rövid videó után maradt kérdés: ebben végigmegyünk a partnerkezelésen,
         az árajánlaton, a terepi funkciókon, a kapcsolattartáson, a piacfigyelésen és az AI-ügynökökön.</p>
     </div>
     <div class="videoblock" style="margin-top:0">
       <video src="video/teljes.mp4" controls playsinline preload="metadata" poster="video/teljes-poszter.jpg"></video>
       <div class="vmeta">
-        <span><strong>Teljes bemutató</strong> · 2 perc 45 mp</span>
+        <span><strong>Teljes bemutató</strong> · 3 perc</span>
         <span>Felirattal — hangszóró nélkül is követhető</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tamogatas">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="kicker">Kiemelt modul</div>
+      <h2>A nyilvános támogatási adatból <em>ügyfélismeret</em></h2>
+      <p class="sub">Az agrártámogatási kifizetések nyilvánosak: ki, hol, milyen jogcímen, mennyit
+        kapott. A rendszer behúzza a listát — és nem csak megmutatja, hanem kiszámolja belőle azt,
+        amit tudni akarsz.</p>
+    </div>
+
+    <div class="videoblock" style="margin-top:0">
+      <video src="video/tamogatas.mp4" controls playsinline preload="metadata" poster="kepek/45-tamogatas-hektar.png"></video>
+      <div class="vmeta">
+        <span><strong>Támogatási lista</strong> · 50 másodperc</span>
+        <span>A számok a demó-adatbázisból származnak</span>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:34px; align-items:start">
+      <div>
+        <ul class="checks">
+          <li><b>Hektár a támogatásból.</b> Megadod a Ft/hektárt, és megjelenik a becsült
+            gazdaságméret — a területalapú támogatás összegéből visszaszámolva.</li>
+          <li><b>Állatlétszám ugyanígy.</b> Az anyatehén- és anyajuh-jogcím összegéből.</li>
+          <li><b>Célzott szűrés.</b> „Kinek van AKG-s kötelezettsége Békésben?" — két kattintás,
+            nem egy heti kutatás.</li>
+          <li><b>Egyenesen a profilba.</b> A kiszámolt érték a névre illeszkedő partner vagy
+            piaci szereplő adatlapjára kerül.</li>
+          <li><b>Onnan pedig terepre.</b> A kijelöltekből havi látogatási terv, abból napi kör.</li>
+        </ul>
+        <p class="sub" style="font-size:15px">A visszaszámolt hektár és állatlétszám <strong>becslés</strong>:
+          a támogatási összegből és az általad megadott fajlagos értékből számol. Kiindulópont a
+          beszélgetéshez, nem hatósági adat.</p>
+      </div>
+      <div class="shotcard">
+        <img src="kepek/45-tamogatas-hektar.png" alt="Támogatási lista hektár-visszaszámolással">
+        <div class="shotcap"><b>Hektár oszlop</b>A Ft/hektár megadása után a listában megjelenik a becsült terület</div>
       </div>
     </div>
   </div>
@@ -291,6 +334,9 @@ const SHOTS = [
   ['27-mepar','MePAR térkép','Blokkazonosítók és területek'],
   ['12-hivasnaplo','Hívásnapló','A telefonnapló magától frissül, a hívás a partnerhez kerül'],
   ['15-naptar','Naptár','Látogatások, túrák, határidők egy helyen'],
+  ['40-tamogatasi-lista','Támogatási lista','A nyilvános kifizetési lista behúzva, szűrhetően'],
+  ['45-tamogatas-hektar','Hektár a támogatásból','Ft/hektár megadása után a becsült gazdaságméret'],
+  ['47-tamogatas-akg','AKG-s kötelezettség','Megyére és jogcímre szűrve — célzott megkeresés'],
   ['22-piacfigyelo','Piacfigyelő','Versenytárs-termékek és árak, ár-összehasonlítóval'],
   ['20-korabbi-eladasok','Korábbi eladások','A tavalyi rendelés egy keresés'],
   ['36-asszisztens','Belső asszisztens','Kérdezz rá a saját CRM-adataidra'],

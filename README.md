@@ -14,7 +14,8 @@ prospektus és a promóciós szövegek.
 | `index.html` | A bemutató oldal (GitHub Pages ezt szolgálja ki) |
 | `video/teaser.mp4` | 60 másodperces gyors bemutató |
 | `video/teljes.mp4` | 3 perces részletes bemutató |
-| `Vetomag-CRM-bemutato.pdf` | 8 oldalas, nyomtatható prospektus |
+| `video/tamogatas.mp4` | 50 másodperces bemutató a támogatási listáról (kiemelt modul) |
+| `Vetomag-CRM-bemutato.pdf` | 9 oldalas, nyomtatható prospektus |
 | `kepek/` | Képernyőképek a működő rendszerből |
 | `szoveg/` | Promóciós szövegek (alapüzenet, modulok, megkeresések, weboldal-szöveg) |
 

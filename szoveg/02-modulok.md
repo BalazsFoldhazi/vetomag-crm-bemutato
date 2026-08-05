@@ -48,9 +48,38 @@ teljesítés. Az elfogadott ajánlatból egy kattintással lesz eladás.
 Terméktörzs kereskedői, végfelhasználói és viszonteladói árral, ÁFA-val, kiszereléssel,
 vetési normával. Excelből importálható, sablon letölthető.
 
-### Támogatási lista
-AKG- és pályázati adatok megyei bontásban — kiszűrhető, kinél áll fenn olyan kötelezettség,
-amire a termékeid megoldást adnak. Ez célzott megkeresés, nem hideghívás.
+### Támogatási lista — a nyilvános adatból ügyfélismeret
+
+Ez a modul önmagában is megérné a rendszert. Az agrártámogatási kifizetések nyilvánosak:
+ki, hol, milyen jogcímen, mennyit kapott. A CRM behúzza a listát — és nem csak megmutatja.
+
+- **Teljes lista, kereshetően**: kedvezményezett, irányítószám, település, megye, cím, jogcím,
+  alap (EMGA/EMVA), forrás, összeg. Szűrés névre, településre, megyére (több is), jogcímre,
+  alapra, forrásra és összeghatárra. A demó-adatbázisban 5 250 sor, 2 800 kedvezményezett,
+  49,8 milliárd forint.
+- **Hektár visszaszámolása**: megadod a fajlagos értéket (pl. 80 000 Ft/ha), és a listában
+  megjelenik a **Hektár** oszlop — vagyis a gazdaság becsült mérete. Ugyanez működik
+  állatonkénti támogatásnál is: onnan az **állatlétszám** jön ki.
+- **Mentés a profilhoz**: a kijelölt sorok kiszámolt értékét a rendszer a **névre illeszkedő
+  partner vagy piaci szereplő** jegyzetéhez fűzi. Innentől nem külön lista — ott van, ahol
+  amúgy is dolgozol.
+- **Havi látogatási terv**: a kijelölt kedvezményezettekből egy kattintással terv készül
+  (kedvezményezettenként összevonva), amiből a napi túra megtervezhető.
+- **Kérdezz rá**: az asszisztens a listáról válaszol — „Ki kapta a legtöbbet?",
+  „Mennyi az EMVA összesen?", „A szűrt lista összege?".
+
+**Mit ér ez az értékesítésben**
+
+- Megtudod egy gazdaság hozzávetőleges méretét anélkül, hogy megkérdeznéd.
+- Látod, kinek van AKG-s kötelezettsége — akinek a zöldtrágya nem választás, hanem előírás.
+- Kiderül, ki tért át ökológiai gazdálkodásra — más termékkör kell neki.
+- Az állattartók az anyatehén- és anyajuh-jogcímből szűrhetők — takarmánykeverék célcsoport.
+- És ami a legfontosabb: a kedvezményezettek nagy része **még nem a partnered** — új célpont,
+  névvel, címmel, mérettel.
+
+**Amit őszintén hozzá kell tenni:** a visszaszámolt hektár és állatlétszám **becslés**. A
+támogatási összegből és az általad megadott fajlagos értékből számol, tehát annyira pontos,
+amennyire a fajlagos érték. Kiindulópont a beszélgetéshez, nem hatósági adat.
 
 ### Költségeim
 Üzemanyag, szállás, étkezés, autópálya — kategóriánként, blokk-fotóval. A vezérlőpulton

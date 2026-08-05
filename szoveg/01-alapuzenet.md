@@ -33,6 +33,17 @@ egy gombbal megy ki. A partnereid a térképen vannak, a napi túrád útvonalra
    csapadéktérkép, műholdas vegetációs térkép, és bejövő híváskor a partner előzménye a telefon
    képernyőjén.
 
+## A negyedik érv, ha egy mondatod van
+
+**A nyilvános támogatási listából kiszámolja a gazdaság méretét, és beleírja a partner profiljába.**
+
+Az agrártámogatási kifizetések nyilvánosak, de nyers formában használhatatlanok. A rendszer
+behúzza a listát, a támogatási összegből és egy fajlagos értékből visszaszámolja a hektárt
+(vagy az állatlétszámot), és a névre illeszkedő partner adatlapjára teszi. Onnan egy kattintás
+a havi látogatási terv.
+
+Ez az a pont, ahol a legtöbb agrár-kereskedő azt mondja: „ezt hogy csináljátok?"
+
 ## Kinek szól
 
 - Vetőmag-, növényvédőszer- és műtrágya-forgalmazó kis- és középvállalkozásoknak

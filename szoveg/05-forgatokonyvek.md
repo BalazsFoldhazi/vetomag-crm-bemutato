@@ -65,6 +65,31 @@ Minden fejezet elején egy sárga fejezetkártya (2 mp), utána 4–7 képernyő
 
 ---
 
+## C. Támogatási lista — 53 másodperc (önálló klip)
+
+Ez a modul külön videót kapott, mert önmagában is elad. Küldhető önállóan is, e-mailben
+vagy üzenetben, a teljes bemutató helyett.
+
+| Idő | Kép | Felirat |
+|---|---|---|
+| 0,0–2,8 | szövegkártya | Van egy nyilvános lista, amit *senki nem használ*. |
+| 2,8–5,5 | szövegkártya | Minden agrártámogatási kifizetés – *név szerint*. |
+| 5,5–9,6 | Támogatási lista | **5 250 sor. 49,8 milliárd forint.** — kedvezményezett, település, jogcím, alap, összeg |
+| 9,6–12,8 | sárga kártya | De nem a lista az érték. Hanem *amit kiolvasol belőle*. |
+| 12,8–17,4 | Hektár-nézet | **Add meg a Ft/hektárt – és megvan a gazdaság mérete.** 1 288 ha, 1 246 ha… |
+| 17,4–20,8 | Állat-nézet | Az állatonkénti támogatásból az állatlétszám. |
+| 20,8–25,2 | AKG + megye szűrés | **Kinek van AKG-s kötelezettsége Békésben?** 223 találat, 1,7 milliárd forint |
+| 25,2–28,2 | szövegkártya | És innentől nem lista. Hanem *ügyfélismeret*. |
+| 28,2–32,6 | Profilba mentés | **A kiszámolt hektár a partner profiljába kerül.** |
+| 32,6–36,5 | Partner adatlap | Ott, ahol amúgy is dolgozol — gazdaság mérete, AKG-terület kitöltve |
+| 36,5–39,7 | Támogatási lista | A kijelöltekből havi látogatási terv |
+| 39,7–42,7 | Napi túra | A tervből pedig kör. |
+| 42,7–45,5 | világos számkártya | **5 250 sor · 2 800 kedvezményezett · 2 kattintás** |
+| 45,5–48,7 | szövegkártya | Nyilvános adatból *saját piaci előny*. |
+| 48,7–52,7 | záró kártya | Vetőmag CRM + a bemutató oldal címe |
+
+---
+
 ## Zene
 
 A videók **szándékosan hang nélkül** készültek, hogy szabadon tehess alá zenét jogtiszta forrásból.
