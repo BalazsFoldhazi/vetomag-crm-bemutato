@@ -16,7 +16,7 @@ return [
     ['type' => 'screen', 'img' => '03-partner-adatlap', 'corner' => true,
         'text' => 'Hektár, AKG, kultúrák,|korábbi vásárlások', 'dur' => 1.8, 'motion' => 'left'],
     ['type' => 'screen', 'img' => '06-arajanlat-szerk', 'badge' => 'Árajánlat', 'corner' => true,
-        'text' => 'Ajánlat percek alatt', 'dur' => 1.7, 'motion' => 'in'],
+        'text' => 'Ajánlat másodpercek alatt', 'dur' => 1.9, 'motion' => 'in'],
     ['type' => 'screen', 'img' => '05-arajanlat-uj', 'corner' => true,
         'text' => 'Koppints a keverékre', 'dur' => 1.4, 'motion' => 'out'],
     ['type' => 'screen', 'img' => '10-kalkulator', 'corner' => true,

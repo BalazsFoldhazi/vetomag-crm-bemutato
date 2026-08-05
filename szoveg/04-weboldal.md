@@ -23,8 +23,9 @@ agrár-kereskedőknek. Nem általános CRM, amit mezőgazdaságra kell hajlítan
 
 1. **Agrár-adatok mezőként** — Hektár, AKG-részvétel és -terület, kultúrák, állatállomány,
    öntözés, tervezett és korábbi zöldítés, vásárlási motiváció, versenytárs-ajánlatok.
-2. **Vetőmag-ajánlat percek alatt** — Keverék-csempék összetétellel és vetési normával,
-   keverék-kalkulátor, súly szerinti szállítási díj, PDF és kiküldés egy gombbal — telefonról is.
+2. **Vetőmag-ajánlat másodpercek alatt** — Még a telefonhívás után, mobilról: koppintás a
+   keverékre, és megy a PDF. Nem kell visszaérni az irodába. Keverék-kalkulátor, vetési norma,
+   súly szerinti szállítási díj — mind magától.
 3. **A terep is benne van** — Partnerek térképen, napi túra útvonalba rendezve, MePAR-blokkok,
    csapadéktérkép, műholdas vegetációs térkép.
 4. **Telefon-integráció** — Bejövő hívásnál a partner előzménye a képernyőn. A telefonnapló

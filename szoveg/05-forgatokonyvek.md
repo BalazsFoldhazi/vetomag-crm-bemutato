@@ -20,7 +20,7 @@
 | 7,8–10,3 | sárga kártya | **Egy rendszer, ami agrár-értékesítésre épült.** |
 | 10,3–12,2 | Partnerlista | Minden partner egy törzsben |
 | 12,2–14,2 | Partner adatlap | Hektár, AKG, kultúrák, korábbi vásárlások |
-| 14,2–16,1 | Árajánlat | Ajánlat percek alatt |
+| 14,2–16,1 | Árajánlat | Ajánlat másodpercek alatt |
 | 16,1–17,9 | Keverék-kalkulátor | Hány zsák kell 40 hektárra? |
 | 17,9–19,5 | Árajánlatok | Kiküldve · elfogadva · utánkövetve |
 | 19,5–21,2 | Értékesítések | Az ajánlatból egy kattintás az eladás |
@@ -56,7 +56,7 @@ Minden fejezet elején egy sárga fejezetkártya (2 mp), utána 4–7 képernyő
 |---|---|
 | **Hook** (0–17 mp) | Három kérdés, a „fejekben és füzetekben" felvezetés, pozicionálás, vezérlőpult |
 | **01 · Partnerek** (17–40 mp) | Partnerlista, agrár-mezős adatlap, névjegyzék-szinkron, piaci szereplők, térképük |
-| **02 · Árajánlat** (40–78 mp) | Ajánlat készítése, élő előnézet, keverék-kalkulátor, ajánlatok állapota, eladás, árlisták |
+| **02 · Árajánlat** (40–78 mp) | Fejezetcím: „A hívástól a kiküldött PDF-ig — mobilról". Ajánlat készítése, élő előnézet, keverék-kalkulátor, ajánlatok állapota, eladás, árlisták |
 | **03 · Terep** (78–110 mp) | Partnertérkép, napi túra, csapadék, műhold, MePAR, látogatások, túrák, zöldtrágya |
 | **04 · Kapcsolattartás** (110–137 mp) | Bejövő hívás mobilon, hívásnapló, napi hívólista, teendők, naptár |
 | **05 · Piac és számok** (137–165 mp) | Piacfigyelő, ár-összehasonlító, kimutatások, korábbi eladások, támogatási lista, piaci jelenlét, heti jelentés, tervek, költségek |

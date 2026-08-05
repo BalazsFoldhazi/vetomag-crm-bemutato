@@ -42,7 +42,7 @@ return [
         'text' => 'És ők is|ott vannak a térképen', 'dur' => 2.4, 'motion' => 'in'],
 
     /* ==================================================== 2. ÁRAJÁNLAT */
-    $chapter('02 · Árajánlat', 'Az igénytől a kiküldött|PDF-ig egy folyamat'),
+    $chapter('02 · Árajánlat', 'A hívástól a kiküldött|PDF-ig — ~mobilról~'),
     ['type' => 'screen', 'img' => '06-arajanlat-szerk', 'badge' => 'Árajánlat', 'corner' => true,
         'text' => 'Élő előnézet:|pontosan ezt kapja az ügyfél',
         'sub' => 'Kedvezmény, szállítási díj, ÁFA – magától számolódik.', 'dur' => 3.6, 'motion' => 'in'],
@@ -160,7 +160,7 @@ return [
         'sub' => 'Telepíthető alkalmazásként, app-store nélkül. A képernyők mobilra készültek, nem kicsinyített asztali nézetek.',
         'dur' => 4.0, 'motion' => 'in'],
     ['type' => 'stat', 'theme' => 'light', 'dur' => 2.6, 'motion' => 'in', 'items' => [
-        ['9', 'modul'], ['40+', 'képernyő'], ['2', 'perc egy ajánlat'],
+        ['9', 'modul'], ['40+', 'képernyő'], ['30 mp', 'egy ajánlat'],
     ]],
     ['type' => 'hero', 'small' => true,
         'text' => 'Az adat nem a fejekben|és nem a füzetekben.|~A rendszerben.~', 'dur' => 3.2, 'motion' => 'out'],
