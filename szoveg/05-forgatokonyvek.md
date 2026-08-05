@@ -94,12 +94,41 @@ vagy üzenetben, a teljes bemutató helyett.
 
 A videók **szándékosan hang nélkül** készültek, hogy szabadon tehess alá zenét jogtiszta forrásból.
 A vágásritmus 120 BPM körüli ütemre lett igazítva, tehát egy energikus, de nem tolakodó
-elektronikus vagy akusztikus alap illik rá.
+akusztikus vagy elektronikus alap illik rá.
 
-Jogtiszta források: YouTube Audio Library, Pixabay Music, Uppbeat, Epidemic Sound (előfizetéses).
-**Ne tegyél alá slágert** — a közösségi platformok levetetik vagy némítják a videót.
+### Hogyan tedd alá (a legegyszerűbb út)
 
-Zene hozzáadása utólag, telefonon is: CapCut → Hang → Zene hozzáadása → export.
+1. Válassz egy zenét valamelyik lenti forrásból. **Legalább 3 perc hosszút** válassz — akkor
+   mindhárom videóra elég egyetlen szám (1:03 / 3:04 / 0:53).
+2. Mentsd ide: `promo/zene/alap.mp3`
+3. Futtasd: `bash eszkozok/zene-hozzaadas.sh`
+
+A szkript a videó hosszára vágja, 1,5 mp-es fel- és lehalkítást tesz rá, egységes hangerőre
+normalizálja (-16 LUFS, ez a webes/közösségi szabvány), és a **képet újrakódolás nélkül**
+másolja át — tehát nem romlik a minőség. Az eredeti néma változatok a
+`video/eredeti-nemitott/` mappába kerülnek, így bármikor vissza lehet állni és másik zenével
+újrapróbálni.
+
+### Hol keress
+
+| Forrás | Licenc | Megjegyzés |
+|---|---|---|
+| **Pixabay Music** (pixabay.com/music) | saját, nagyon megengedő | Nem kell feltüntetés, kereskedelmi használat is rendben. A legegyszerűbb út. |
+| **YouTube Audio Library** (Stúdió → Hangtár) | ingyenes, egy részénél feltüntetés kell | Csak bejelentkezve érhető el, viszont jó a minősége. |
+| **Uppbeat** (uppbeat.io) | ingyenes szint feltüntetéssel | Van „no attribution" előfizetés is. |
+| **Free Music Archive** (freemusicarchive.org) | CC-licencek | Figyelj a licencre: az **NC** (non-commercial) jelzésű nem jó, ha egyszer értékesítesz. |
+
+**Keresőszavak a mostani hangulathoz** (meleg, gitáros, kicsit melankolikus, de emelkedő):
+`uplifting acoustic`, `indie folk`, `warm guitar`, `nostalgic indie pop`, `hopeful acoustic`.
+Ha inkább lendületesebb, „techesebb" hangzást szeretnél: `corporate uplifting`, `modern inspiring`.
+
+**Amit kerülj:** kiadott sláger (Content ID lenémítja vagy letiltja), és a túl domináns,
+énekes szám — a videó feliratos, az ének elviszi róla a figyelmet. Az instrumentális jobb.
+
+### Alternatíva telefonon
+
+CapCut → a videó betöltése → Hang → Zene hozzáadása → a beépített, jogtiszta könyvtárból
+választasz → export. Ez akkor jó, ha inkább a telefonodon intéznéd.
 
 ---
 

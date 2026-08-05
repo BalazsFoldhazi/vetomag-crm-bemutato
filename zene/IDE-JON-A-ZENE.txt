@@ -1,0 +1,10 @@
+Ide kerül a bemutató videók alá szánt zene.
+
+FÁJLNÉV:  alap.mp3   (a .wav és .m4a is jó)
+
+FONTOS: csak olyan zene kerülhet ide, aminek a felhasználására jogod van
+(jogtiszta / royalty-free könyvtárból, vagy a szerző írásos engedélyével).
+Kiadott sláger nem jó: a közösségi platformok lenémítják vagy letiltják a
+videót, a nyilvános oldalon pedig jogsértés.
+
+Ha megvan a fájl:   bash eszkozok/zene-hozzaadas.sh
