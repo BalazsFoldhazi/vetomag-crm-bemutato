@@ -69,7 +69,7 @@ return [
     ['type' => 'stat', 'theme' => 'light', 'dur' => 2.0, 'motion' => 'in', 'items' => [
         ['40+', 'képernyő'], ['9', 'modul'], ['0', 'Excel-fájl'],
     ]],
-    ['type' => 'hero', 'text' => 'Nem prototípus.|~Élesben megy~, minden nap.', 'small' => true, 'dur' => 2.4, 'motion' => 'out'],
+    ['type' => 'hero', 'text' => 'Az adat nem a fejekben.|~A rendszerben.~', 'small' => true, 'dur' => 2.4, 'motion' => 'out'],
     ['type' => 'outro', 'text' => 'Agrár-értékesítés egy rendszerben.|Nézd meg a részletes bemutatót:',
         'url' => 'balazsfoldhazi.github.io/vetomag-crm-bemutato', 'dur' => 3.4, 'motion' => 'in'],
 ];

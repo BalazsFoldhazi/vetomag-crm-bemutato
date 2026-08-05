@@ -163,7 +163,7 @@ return [
         ['9', 'modul'], ['40+', 'képernyő'], ['2', 'perc egy ajánlat'],
     ]],
     ['type' => 'hero', 'small' => true,
-        'text' => 'Nem prototípus.|~Élesben megy~, minden nap,|egy magyar vetőmagcégnél.', 'dur' => 3.2, 'motion' => 'out'],
+        'text' => 'Az adat nem a fejekben|és nem a füzetekben.|~A rendszerben.~', 'dur' => 3.2, 'motion' => 'out'],
     ['type' => 'outro', 'text' => 'Agrár-értékesítés egy rendszerben.|A bemutató anyag itt érhető el:',
         'url' => 'balazsfoldhazi.github.io/vetomag-crm-bemutato', 'dur' => 4.0, 'motion' => 'in'],
 ];

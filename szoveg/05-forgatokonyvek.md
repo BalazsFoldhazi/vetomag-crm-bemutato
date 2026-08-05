@@ -42,7 +42,7 @@
 | 46,7–48,5 | Asszisztens | Kérdezz rá a saját adataidra |
 | 48,5–50,9 | **mobil** – két képernyő | Zsebben is a teljes rendszer. |
 | 50,9–53,1 | világos számkártya | **9 modul · 40+ képernyő · 0 Excel-fájl** |
-| 53,1–55,7 | szövegkártya | Nem prototípus. *Élesben megy*, minden nap. |
+| 53,1–55,7 | szövegkártya | Az adat nem a fejekben. *A rendszerben.* |
 | 55,7–59,3 | záró kártya | Vetőmag CRM + a bemutató oldal címe |
 
 ---
@@ -61,7 +61,7 @@ Minden fejezet elején egy sárga fejezetkártya (2 mp), utána 4–7 képernyő
 | **04 · Kapcsolattartás** (110–137 mp) | Bejövő hívás mobilon, hívásnapló, napi hívólista, teendők, naptár |
 | **05 · Piac és számok** (137–165 mp) | Piacfigyelő, ár-összehasonlító, kimutatások, korábbi eladások, támogatási lista, piaci jelenlét, heti jelentés, tervek, költségek |
 | **06 · Ügynökök** (165–182 mp) | Asszisztens, adatdúsító, szaktanácsadó, karmester, e-mail ügynök, fajtatábla |
-| **Zárás** (182–195 mp) | Mobil, számkártya, „élesben megy", záró kártya a linkkel |
+| **Zárás** (182–195 mp) | Mobil, számkártya, záró szövegkártya és a link |
 
 ---
 

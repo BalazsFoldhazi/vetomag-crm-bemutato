@@ -10,8 +10,7 @@
 **Címsor:** A partnertörzstől a kiküldött ajánlatig — *egy rendszerben*.
 
 **Alcím:** Ügyfélkezelés, árajánlat, térkép, hívásnapló és piacfigyelés vetőmag- és
-agrár-kereskedőknek. Nem általános CRM, amit mezőgazdaságra kell hajlítani — és nem prototípus:
-élesben megy, minden nap.
+agrár-kereskedőknek. Nem általános CRM, amit mezőgazdaságra kell hajlítani.
 
 **Gombok:** ▶ 60 másodperces bemutató · Prospektus (PDF)
 
@@ -57,8 +56,7 @@ Ha később mégis értékesítési fázisba kerül, ez a szöveg illeszthető b
 
 ## Lábléc / jogi
 
-A rendszer élesben működik egy magyar vetőmag-forgalmazónál. A MePAR-, támogatási és
-fajtaadatok tájékoztató jellegűek, hivatalos nyilvántartást nem helyettesítenek.
+A MePAR-, támogatási és fajtaadatok tájékoztató jellegűek, hivatalos nyilvántartást nem helyettesítenek.
 A képernyőképeken anonimizált demó-adatok szerepelnek.
 
 ---
