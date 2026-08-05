@@ -45,10 +45,15 @@ telefonszámok és e-mail-címek kitaláltak: a felvételek anonimizált demó-a
 **Nyolc oldal, nyomtatható.** Ugyanez leírva: a probléma, a modulok, a bevezetés menete és az
 árazás alapjai. Jó, ha meg kell mutatni valakinek, aki nem néz videót.
 
-## Záró CTA
+## Záró blokk
 
-**Nézd meg a saját adataitokkal.** Egy online bemutató fél óra. Megnézzük, mit vezettek ma és
-miben, és hogy ebből mi kerülne át a rendszerbe. Ha nem illik hozzátok, azt is megmondom.
+Az oldalon **szándékosan nincs kapcsolatfelvételi felhívás**: ez most bemutató anyag, nem
+értékesítési oldal. Az utolsó szekció a prospektus, utána közvetlenül a lábléc jön.
+
+Ha később mégis értékesítési fázisba kerül, ez a szöveg illeszthető be zárásnak:
+
+> **Nézd meg a saját adataitokkal.** Egy online bemutató fél óra. Megnézzük, mit vezettek ma és
+> miben, és hogy ebből mi kerülne át a rendszerbe. Ha nem illik hozzátok, azt is megmondom.
 
 ## Lábléc / jogi
 
@@ -58,10 +63,11 @@ A képernyőképeken anonimizált demó-adatok szerepelnek.
 
 ---
 
-## Amit még be kell írnod, mielőtt élesben terjeszted
+## Ha később értékesítési fázisba kerül
 
-- **Kapcsolatfelvétel gomb célja.** Most a `lajtamag.hu`-ra mutat. Ha külön e-mail-címet vagy
-  űrlapot akarsz (pl. `crm@lajtamag.hu`), azt cseréld be az `index.html`-ben a
-  „Kapcsolatfelvétel" gombnál.
-- **Árazás.** Szándékosan nincs ár sem az oldalon, sem a PDF-ben. Ha fix listaárral mész ki,
-  érdemes betenni — ha egyedi ajánlattal, akkor jobb így.
+- **Kapcsolatfelvétel.** Jelenleg nincs az oldalon. Ha kell, a prospektus-szekció után egy
+  `<section class="final">` blokk a fenti szöveggel és egy gombbal (e-mail-cím vagy űrlap).
+- **Árazás.** Szándékosan nincs ár sem az oldalon, sem a PDF-ben.
+- **Megkeresések.** A kész hideg e-mailek és posztok a
+  [`03-megkeresesek.md`](03-megkeresesek.md) fájlban várnak — azok is csak akkor kellenek,
+  amikor tényleg elindul az értékesítés.

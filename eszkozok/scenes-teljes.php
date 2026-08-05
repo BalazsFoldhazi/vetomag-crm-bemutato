@@ -164,6 +164,6 @@ return [
     ]],
     ['type' => 'hero', 'small' => true,
         'text' => 'Nem prototípus.|~Élesben megy~, minden nap,|egy magyar vetőmagcégnél.', 'dur' => 3.2, 'motion' => 'out'],
-    ['type' => 'outro', 'text' => 'Nézd meg élőben, a saját adataitokkal.|Írj, és megbeszéljük.',
+    ['type' => 'outro', 'text' => 'Agrár-értékesítés egy rendszerben.|A bemutató anyag itt érhető el:',
         'url' => 'balazsfoldhazi.github.io/vetomag-crm-bemutato', 'dur' => 4.0, 'motion' => 'in'],
 ];
